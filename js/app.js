@@ -93,7 +93,8 @@ function render() {
     if (winner === 'T') {
         message.innerHTML = 'Tie, Try Again!';
     } else if (winner) {
-        message.innerHTML = `Congrats Player ${playerIs[winner].toUpperCase()}!`;
+        confetti.start(2000, 150)
+        message.innerHTML = `Congrats Player ${playerIs[winner].toUpperCase()} You Won!`;
     } else {
         message.innerHTML = `Player ${playerIs[turn].toUpperCase()}'s Turn!`;
     }
